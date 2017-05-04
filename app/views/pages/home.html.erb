@@ -2,7 +2,7 @@
 <div class="container">
   <div classs="row">
   <div class="marged"></div>
-  <div class="pop-up hidden">
+  <div class="pop-up">
   <%= render 'shared/contact-us' %>
   </div>
     <div class="container-body">
@@ -49,7 +49,7 @@
     );
 
     $('#test').on('click', function(event) {
-    $('.pop-up').toggleClass('hidden');
+    $('.pop-up').toggleClass('hiddened');
     $('.container-body').toggleClass('container-body-up');
     });
 
