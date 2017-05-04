@@ -1,31 +1,29 @@
-<div class="container-body">
-  <div class="row-body">
-    <div class="logo-brand">
-    <%= image_tag "Logo.svg.png", id: "logo", class: "main-logo" %>
-    </div>
-    <div class="full-title">
-      <div class="top-title" id="title-change">
-      <H1>We Are Ruby Agency</H1>
-      </div>
-      <div class="bot-title">
-        <span>Nous sommes actuellement en maintenance</span>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <div classs="row">
+  <div class="marged"></div>
+  <div class="pop-up hidden">
+  <%= render 'shared/contact-us' %>
+  </div>
+    <div class="container-body">
+    <div class="row">
+        <div class="row-body">
+          <div class="logo-brand">
+          <%= image_tag "Logo.svg.png", id: "logo", class: "main-logo" %>
+          </div>
+          <div class="full-title">
+            <div class="top-title" id="title-change">
+            <H1>We Are Ruby Agency</H1>
+            </div>
+            <div class="bot-title">
+              <span>Nous sommes actuellement en maintenance</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -44,6 +42,21 @@
     $('.logo-brand').toggleClass('rotate-second');
     }
     );
+
+    $("#test").hover(
+    function(event) {
+    $('.logo-brand').addClass('rotate');
+    },
+    function(event) {
+    $('.logo-brand').toggleClass('rotate-second');
+    }
+    );
+
+    $('#test').on('click', function(event) {
+    $('.pop-up').removeClass('hidden');
+    });
+
+
     });
   <% end %>
 <% end %>
