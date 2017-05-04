@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :infos
 
-  root to: 'pages#maintenance'
+  root to: 'pages#home'
 
   get "infos",     to: "pages#home"
   post "infos",     to: "pages#home"
