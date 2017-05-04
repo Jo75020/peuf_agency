@@ -1,10 +1,31 @@
 <div class="container">
   <div class="row floated-right">
-    <div class="col-xs-12">
-      Remplie ce formulaire nous te recontacterons
-      <form action="post">
-      <input type="text"></input>
-      </form>
+    <div class="col-xs-12 text-center">
+      <span class="title-form">Remplie ce formulaire nous te recontacterons bientot !</span>
+      <%= simple_form_for(@info) do |f| %>
+        <%= f.error_notification %>
+        <div id='first_name'>
+        <%= f.input :first_name, required: true , label: '',placeholder: 'Prénom', class: "input-form-home"%>
+        </div>
+        <div id='last_name' class="">
+        <%= f.input :last_name, required: true , label: '',placeholder: 'Nom', class: "input-form-home"%>
+        </div>
+        <div id='email' class="">
+        <%= f.input :email, required: true , label: '',placeholder: 'Email', class: "input-form-home" %>
+        </div>
+        <div id='phone' class="">
+        <%= f.input :phone, required: true , label: '',placeholder: 'Numéro de téléphone',class: "input-form-home" %>
+        </div>
+        <div id='company_name' class="">
+        <%= f.input :company_name, required: true , label: '',placeholder: 'Le nom de votre société',class: "input-form-home" %>
+        </div>
+        <div id='description' class="">
+        <%= f.input :description, required: true , label: '',placeholder: 'Que recherchez vous brievement ?',class: "input-form-home" %>
+        </div>
+        <div id='submit' class="">
+        <%= f.button :submit, label: 'rr',placeholder: 'Contact WARA !' %>
+        </div>
+    <% end %>
     </div>
   </div>
 </div>

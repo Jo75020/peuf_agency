@@ -1,3 +1,25 @@
 .floated-right {
   float:right;
+  padding: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 0 rgba(0, 0, 0, 0.18);
+  margin-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 90;
+  background: white;
+  width: 35%;
+}
+
+abbr {
+  display: none;
+}
+
+.title-form {
+  font-family: 'Love Ya Like A Sister', cursive;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-group {
+  margin-bottom: 5px;
 }

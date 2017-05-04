@@ -8,4 +8,20 @@
 
 .pop-up {
 float:right;
+position:relative;
+z-index:10;
+}
+
+.up {
+  position: relative;
+  margin-top: -230px;
+  padding-top: 200px;
+}
+
+.features {
+  background: black;
+}
+
+body {
+  overflow: hidden;
 }
