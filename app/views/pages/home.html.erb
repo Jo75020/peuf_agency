@@ -1,2 +1,49 @@
+<div class="container-body">
+  <div class="row-body">
+    <div class="logo-brand">
+    <%= image_tag "Logo.svg.png", id: "logo", class: "main-logo" %>
+    </div>
+    <div class="full-title">
+      <div class="top-title" id="title-change">
+      <H1>We Are Ruby Agency</H1>
+      </div>
+      <div class="bot-title">
+        <span>Nous sommes actuellement en maintenance</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+
+    $("#logo").hover(
+    function(event) {
+    $('.logo-brand').addClass('rotate');
+    },
+    function(event) {
+    $('.logo-brand').toggleClass('rotate-second');
+    }
+    );
+    });
+  <% end %>
+<% end %>
