@@ -20,7 +20,12 @@
         <div class="dropdown">
         </div>
       </div>
+    <div class="arrow-anim">
+    <i class="fa fa-long-arrow-right hidden" id="arrow-anim-1"></i>
+    <i class="fa fa-long-arrow-right hidden" id="arrow-anim-2"></i>
+    <i class="fa fa-long-arrow-right hidden" id="arrow-anim-3"></i>
 
+    </div>
     <!-- Button (call-to-action) -->
     <%= link_to t(".top_call_to_action", default: "Contact WARA"), "#", class: "navbar-wagon-item navbar-wagon-button btn", id:"test" %>
   </div>
@@ -40,8 +45,9 @@
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
-    $(document).ready(function() {
 
+
+  $(document).ready(function() {
     $("#logo-nav").hover(
     function(event) {
     $('.navbar-wagon-brand').addClass('rotate-nav');
@@ -50,6 +56,90 @@
     $('.navbar-wagon-brand').toggleClass('rotate-second-nav');
     }
     );
-    });
+  });
+
+
+  $(document).ready(function() {
+
+
+function myTimeoutFunction()
+{
+
+    setTimeout(function(){
+    $('.navbar-wagon-brand').toggleClass('rotate-second-nav');
+    }, 3000);
+
+    setTimeout(function(){
+    $('#arrow-anim-1').toggleClass('hidden');
+    }, 13000);
+
+    setTimeout(function(){
+    $('#arrow-anim-2').toggleClass('hidden');
+    }, 13500);
+
+    setTimeout(function(){
+    $('#arrow-anim-3').toggleClass('hidden');
+    }, 14000);
+
+
+    setTimeout(function(){
+    $('#test').toggleClass('navbar-wagon-button-hovered');
+    }, 14150);
+
+    setTimeout(function(){
+    $('#test').toggleClass('navbar-wagon-button-hovered');
+    }, 14300);
+
+    setTimeout(function(){
+    $('#test').toggleClass('navbar-wagon-button-hovered');
+    }, 14450);
+
+    setTimeout(function(){
+    $('#test').toggleClass('navbar-wagon-button-hovered');
+    }, 14600);
+
+    setTimeout(function(){
+    $('.navbar-wagon-brand').removeClass('rotate-second-nav');
+    }, 14250);
+
+    setTimeout(function(){
+    $('#arrow-anim-1').toggleClass('hidden');
+    $('#arrow-anim-2').toggleClass('hidden');
+    $('#arrow-anim-3').toggleClass('hidden');
+    }, 14550);
+
+    setTimeout(function(){
+    $('#arrow-anim-1').toggleClass('hidden');
+    $('#arrow-anim-2').toggleClass('hidden');
+    $('#arrow-anim-3').toggleClass('hidden');
+    }, 15000);
+
+    setTimeout(function(){
+    $('#arrow-anim-1').toggleClass('hidden');
+    $('#arrow-anim-2').toggleClass('hidden');
+    $('#arrow-anim-3').toggleClass('hidden');
+    }, 15550);
+
+    setTimeout(function(){
+    $('#arrow-anim-1').toggleClass('hidden');
+    $('#arrow-anim-2').toggleClass('hidden');
+    $('#arrow-anim-3').toggleClass('hidden');
+    }, 16000);
+
+    setTimeout(function(){
+    $('#arrow-anim-1').toggleClass('hidden');
+    $('#arrow-anim-2').toggleClass('hidden');
+    $('#arrow-anim-3').toggleClass('hidden');
+    }, 18500);
+
+
+
+}
+
+myTimeoutFunction();
+setInterval(myTimeoutFunction, 22000);
+    console.log("start first");
+      $('.navbar-wagon-brand').toggleClass('rotate-nav');
+      });
   <% end %>
 <% end %>

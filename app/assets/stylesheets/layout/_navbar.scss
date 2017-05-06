@@ -22,7 +22,8 @@
 
 /* Navbar logo */
 .navbar-wagon-brand{
-    transition: 2.2s;
+    transition: 10s;
+    -webkit-transition:10s;
 }
 .navbar-wagon-brand img {
   width: 115px;
@@ -73,6 +74,18 @@
   transition: 1s;
   border-radius:4px;
 }
+
+.navbar-wagon-button-hovered {
+  color: white;
+  background: #333333;
+  border-color: #333333;
+  font-family: 'Love Ya Like A Sister', cursive;
+  letter-spacing: 3px;
+  transition: 1s;
+  border-radius:4px;
+}
+
+
 
 /* Navbar search form */
 .navbar-wagon-search {
@@ -142,10 +155,36 @@
   position:relative;
   left:0px;
   transition: 10s;
+  -webkit-transition:10s;
 }
 
 .rotate-second-nav {
   position:relative;
   left:75%;
-  transition: 15s;
+  transition: 10s;
+  -webkit-transition:10s;
+}
+
+.arrow-anim {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#arrow-anim-1 {
+  font-size: 18px;
+      -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+}
+
+#arrow-anim-2 {
+  font-size: 18px;
+
+}
+
+#arrow-anim-3 {
+  font-size: 18px;
+      -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
 }

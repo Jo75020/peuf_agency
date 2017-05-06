@@ -1,12 +1,11 @@
 <%= render 'shared/navbar' %>
 <div class="container">
-  <div classs="row">
   <div class="marged"></div>
   <div class="pop-up">
   <%= render 'shared/contact-us' %>
   </div>
+  <div classs="row" style="height: 100vh;">
     <div class="container-body">
-    <div class="row">
         <div class="row-body">
           <div class="logo-brand">
           <%= image_tag "Logo.svg.png", id: "logo", class: "main-logo" %>
@@ -18,12 +17,44 @@
             <div class="bot-title">
               <span>Nous sommes actuellement en maintenance</span>
             </div>
+            <div style="height: 50px;"></div>
+            <div class="bot-arrow">
+            <i class="" id="go-to-second-step" aria-hidden="true"></i>
+            </div>
           </div>
         </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="marged" id="user-second-step"></div>
+<div class="row">
+    <div class="col-xs-12">
+      <div class="wrapper-features" style="height: 93vh;">
+        <div class="text-center" style=''>
+          <span class="text-styled" style=""></span>
+        </div>
+        <div class="marged"></div>
+          <div class="col-md-4 col-xs-12" style="margin-top: 20px;">
+          <div class="flexed">
+          </div>
+          <p style="margin:0;margin-top:20px;">
+            <span style="font-size: 20px;color: #980e16;"></span>
+          </p>
+          </div>
+          <div class="col-md-4 col-xs-12 text-center" style="margin-top: 20px;">
+          <h4></h4>
+          <span></span>
+          </div>
+          <div class="col-md-4 col-xs-12" style="margin-top: 20px;">
+          <h4></h4>
+          <span></span>
+          </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 <% content_for(:after_js) do %>
@@ -52,6 +83,24 @@
     $('.pop-up').toggleClass('hiddened');
     $('.container-body').toggleClass('container-body-up');
     });
+
+    $('#logo-nav').on('click', function(event) {
+    var page = '.container-body'; // Page cible
+      var speed = 750; // Durée de l'animation (en ms)
+      $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+      $('body').toggleClass('whited-background');
+      return false;
+    });
+
+    $('#go-to-second-step').on('click', function(event) {
+    var page = '#user-second-step'; // Page cible
+      var speed = 750; // Durée de l'animation (en ms)
+      $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+      $('body').toggleClass('whited-background');
+      return false;
+    });
+
+
 
 
     });
