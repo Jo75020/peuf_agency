@@ -2,8 +2,32 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  border: 1px solid white;
+  padding: 10px;
+  width: 80%;
+  position: relative;
+  left: 42px;
+  top: 20px;
+  border-radius: 20px;
+  color: white;
 }
 .shared-link i {
   margin-right: 10px;
   font-size: 25px;
+}
+
+.img-contact {
+  background-image: url('contact-image.jpg')
+}
+.up {
+  position: relative;
+  margin-top: -519px;
+  padding-top: 460px;
+}
+
+.up2 {
+    position: relative;
+    margin-top: -372px;
+    padding-top: 460px;
+    background-color: rgba(0, 0, 0, 0.85);
 }
