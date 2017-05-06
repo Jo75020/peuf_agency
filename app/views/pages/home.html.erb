@@ -14,7 +14,7 @@
             <div class="top-title" id="title-change">
             <H1>We Are Ruby Agency</H1>
             </div>
-            <div class="bot-title">
+            <div class="bot-title" id="maintenance-text">
               <span>Nous sommes actuellement en maintenance</span>
             </div>
             <div style="height: 50px;"></div>
@@ -99,10 +99,27 @@
       $('body').toggleClass('whited-background');
       return false;
     });
-
-
-
-
     });
+
+
+$(document).ready(function() {
+
+  function myTimeoutHomeFunction()
+  {
+    setTimeout(function(){
+    $('#title-change').addClass('resize');
+    }, 550);
+    setTimeout(function(){
+    $('#maintenance-text').addClass('resize');
+    }, 850);
+    setTimeout(function(){
+    $('.logo-brand').toggleClass('rotate-second');
+    }, 1050);
+  }
+
+  myTimeoutHomeFunction();
+  setInterval(myTimeoutHomeFunction, 22000);
+
+});
   <% end %>
 <% end %>
