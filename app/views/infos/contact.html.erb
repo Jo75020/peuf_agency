@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+  <div class="col-xs-12" style="height: 30px;"></div>
+    <div class="col-xs-12 text-center">
+      <span class="title-form">Remplissez ce formulaire nous vous recontacterons.</span>
+      <%= simple_form_for(@info) do |f| %>
+        <%= f.error_notification %>
+        <div id='first_name'>
+        <%= f.input :first_name, required: true , label: '',placeholder: 'Prénom', class: "input-form-home"%>
+        </div>
+        <div id='last_name'>
+        <%= f.input :last_name, required: true , label: '',placeholder: 'Nom', class: "input-form-home"%>
+        </div>
+        <div id='email'>
+        <%= f.input :email, required: true , label: '',placeholder: 'Email', class: "input-form-home" %>
+        </div>
+        <div id='phone'>
+        <%= f.input :phone, required: true , label: '',placeholder: 'Numéro de téléphone',class: "input-form-home" %>
+        </div>
+        <div id='company_name'>
+        <%= f.input :company_name, required: true , label: '',placeholder: 'Le nom de votre société',class: "input-form-home" %>
+        </div>
+        <div id='description'>
+        <%= f.input :description, required: true , label: '',placeholder: 'Votre question...',class: "input-form-home" %>
+        </div>
+        <div class="col-xs-12" style="height: 30px;"></div>
+        <div id='submit'>
+        <%= f.button :submit, value: 'À Bientot !',placeholder: 'Contact WARA !' %>
+        </div>
+    <% end %>
+    </div>
+    <div class="col-xs-12 shared-link">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 class InfosController < ApplicationController
-skip_before_action :authenticate_user!
+skip_before_action :authenticate_user!, only: [ :create, :contact, :show]
   def create
     @info = Info.new(info_params)
     if @info.save
@@ -9,6 +9,13 @@ skip_before_action :authenticate_user!
     end
 
   end
+
+  def contact
+    @info = Info.new
+  end
+
+
+
 private
 
   def set_info
