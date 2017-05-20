@@ -29,8 +29,21 @@ opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
 }
 
+#go-to-second-step {
+  font-size: 18px;
+}
 
 
+.opaced {
+  opacity:0;
+  transition: visibility 0s, opacity 2.3s linear;
+}
+
+
+.non-opaced {
+  opacity:1;
+  transition: visibility 0s, opacity 2.3s linear;
+}
 
 .resize {
 letter-spacing: 0px;

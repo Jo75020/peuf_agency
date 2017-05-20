@@ -19,7 +19,7 @@
             </div>
             <div style="height: 50px;"></div>
             <div class="bot-arrow">
-            <i class="" id="go-to-second-step" aria-hidden="true"></i>
+            <i class="fa fa-arrow-down opaced" id="go-to-second-step" aria-hidden="true"></i>
             </div>
           </div>
         </div>
@@ -115,6 +115,10 @@ $(document).ready(function() {
     setTimeout(function(){
     $('.logo-brand').toggleClass('rotate-second');
     }, 1050);
+    setTimeout(function(){
+    $('#go-to-second-step').removeClass('opaced');
+    $('#go-to-second-step').toggleClass('non-opaced');
+    }, 2000);
   }
 
   myTimeoutHomeFunction();
